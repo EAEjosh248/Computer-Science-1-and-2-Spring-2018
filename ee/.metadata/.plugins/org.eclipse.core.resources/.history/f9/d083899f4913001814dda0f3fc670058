@@ -1,0 +1,16 @@
+
+public class GUI extends Application {
+  public static void main(String[] args) {
+    launch(args);
+  }
+  @Override
+  public void start(Stage stage) {
+	  
+	
+   
+    Group root = (Group) scene.getRoot();
+    root.getChildren().add(grid);
+    stage.setScene(scene);
+    stage.show();
+  }
+}

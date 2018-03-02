@@ -1,0 +1,24 @@
+
+public class palin {
+
+	static boolean palindorm(String s,char a, char b,int index) {
+	boolean	ispalin;
+	if(s.charAt(s.length()/2)==index)	{
+		return ispalin = palindorm(s,s.charAt(index),s.charAt(s.length()-index),index+1);
+	}else {
+		if(a==b) {
+			ispalin = largest(arg, arg[index], index+1);
+	}else {
+		}
+	}
+		
+	
+	
+		
+		
+	}
+	public static void main(String[] args) {
+	
+	
+	}
+}

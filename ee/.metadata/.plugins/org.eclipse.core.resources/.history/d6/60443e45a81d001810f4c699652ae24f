@@ -1,0 +1,98 @@
+//package Recursion_Lab;
+//import java.util.Iterator;
+//import java.util.LinkedList;
+//import java.util.ListIterator;
+//
+//	public class MyLinkedList extends  LinkedList<String>   {
+//		 Iterator inter= null;
+//		 public MyLinkedList() {
+//			inter =super().iterator();	}
+//		
+//		
+//		String findLargest(String larg) {
+//			String large;
+//		System.out.println(larg);
+//			if(!inter.hasNext()) {
+//				large = larg;
+//			}else {
+//				String temp = inter.next();
+//				if(larg.compareTo(temp)>0) {
+//					large = findLargest(larg);
+//				}else {
+//					large = findLargest(temp);	
+//				}
+//			}
+//		
+//			return large;
+//		
+//		}
+//
+//		public String findLargest() {
+//		String Largest;
+//		Largest= inter.next();
+//		if(inter.hasNext()) {
+//			Largest = findLargest(Largest);
+//		}
+//		return Largest;
+//		
+//		
+//		
+//		}
+//		
+//
+//		}
+//
+//
+//	
+//package Recursion_Lab;
+//
+//import java.util.Iterator;
+//import java.util.LinkedList;
+//
+//@SuppressWarnings("serial")
+//public class MyLinkedList extends LinkedList<String> implements Comparable <String>
+//{
+//	String maximum ="";
+//	Iterator<String>iterator = null;
+//
+///**	@Override
+//	public boolean add(String arg0) {
+//		// TODO Auto-generated method stub
+//		return false;
+//	}
+//**/	
+//	// method to find largest 
+//	public String findLargest() 
+//	{
+//		// TODO Auto-generated method stub
+//		if (iterator == null)	// to check iterator is null
+//			iterator = super.iterator();
+//			
+//		if (iterator.hasNext()==false)	// check iterator next element is false
+//		{
+//			iterator = null;
+//		return maximum;
+//		}
+//		
+//		else 
+//		{
+//			String data = iterator.next(); 	// getting value from iterator
+//			
+//			if(compareTo(data)<0) 	// calling compare method
+//			{
+//				maximum = data; 	// updating the maximum 
+//			}
+//			findLargest(); 	// call findLargest method
+//		}
+//		return maximum; 	// return maximum String
+//	}
+//
+//	
+//
+//	@Override
+//	public int compareTo(String arg0) {
+//		// TODO Auto-generated method stub
+//		return maximum.compareTo(arg0);
+//	}
+//
+//}

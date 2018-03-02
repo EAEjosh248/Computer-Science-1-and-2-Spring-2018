@@ -1,0 +1,44 @@
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TitledPane;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+
+public class GUI extends Application {
+  public static void main(String[] args) {
+    launch(args);
+  }
+  @Override
+  public void start(Stage stage) {
+	    Scene scene = new Scene(new Group(), 600, 250);
+	    VBox grid = new VBox(2);
+	    VBox nCGrid = new VBox(3);
+	    VBox nCGridc1 = new VBox(3);
+
+	    HBox nEGrid = new HBox(3);
+	  
+	    ToggleGroup fixGroup=  new ToggleGroup();
+	    RadioButton in2post = new RadioButton("Infix to Postfix");
+	    RadioButton post2in = new RadioButton("Postfix to Infix");
+	    in2post.setToggleGroup(fixGroup);
+	    nCGridc1.getChildren().addAll(in2post,post2in);
+	    nCGrid.getChildren().addAll(nCGridc1);
+	    
+	    TitledPane Nconv = new TitledPane("Notation Conversion", nCGrid);
+	    TitledPane Neval = new TitledPane("Notation Evalution", nEGrid);
+
+	    grid.getChildren().addAll(Nconv,Neval);
+	   
+
+   
+    Group root = (Group) scene.getRoot();
+    root.getChildren().add(grid);
+    stage.setScene(scene);
+    stage.show();
+  }
+
+}

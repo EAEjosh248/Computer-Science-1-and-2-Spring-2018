@@ -1,0 +1,13 @@
+
+public class palin {
+
+	static boolean palindorm(String s,char a, char b) {
+		
+		return false;
+		
+	}
+	public static void main(String[] args) {
+	
+	
+	}
+}

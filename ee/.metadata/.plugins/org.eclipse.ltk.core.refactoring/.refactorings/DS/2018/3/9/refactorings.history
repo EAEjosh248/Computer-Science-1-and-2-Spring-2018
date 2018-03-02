@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;LinkedList.java&apos; to &apos;204Lab/src/Recursion_Lab&apos;&#x0D;&#x0A;- Original project: &apos;DS&apos;&#x0D;&#x0A;- Destination element: &apos;204Lab/src/Recursion_Lab&apos;&#x0D;&#x0A;- Original element: &apos;Linklist.LinkedList.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=204Lab/src&lt;Recursion_Lab" element1="/src&lt;Linklist{LinkedList.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1519868097290" units="1" version="1.0"/>
+</session>

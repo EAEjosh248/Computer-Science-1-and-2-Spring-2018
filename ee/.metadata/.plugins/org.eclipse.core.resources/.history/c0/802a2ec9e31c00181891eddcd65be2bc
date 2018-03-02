@@ -1,0 +1,30 @@
+
+public class Largest {
+
+	int largest(int[] arg,int larg, int index) {
+		
+		
+		if(index == arg.length) {
+			return larg;
+		}else {
+			if(arg[index]>larg) {
+				largest(arg, arg[index], index+1);
+		}else {
+			largest(arg, larg, index+1);	
+		}
+		}
+		
+		return -1;
+		
+	}
+	public static void main(String[] args) {
+
+		int b [] = {2,5,7,4,45,99,885,56,75,82,55};
+		
+		System.out.println(largest());
+		
+		
+		
+	}
+
+}

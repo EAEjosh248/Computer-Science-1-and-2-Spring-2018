@@ -1,0 +1,19 @@
+
+public class palin {
+
+	static boolean palindorm(String s,char a, char b) {
+	boolean	ispalin;
+	if(s.charAt(s.length()/2)==a)	{
+		return ispalin;
+	}
+		
+	
+	
+		
+		
+	}
+	public static void main(String[] args) {
+	
+	
+	}
+}

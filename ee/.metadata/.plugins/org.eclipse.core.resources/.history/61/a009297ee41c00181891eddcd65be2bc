@@ -1,0 +1,11 @@
+
+public class palin {
+
+	static boolean palindorm(String s) {
+		
+	}
+	public static void main(String[] args) {
+	
+	
+	}
+}

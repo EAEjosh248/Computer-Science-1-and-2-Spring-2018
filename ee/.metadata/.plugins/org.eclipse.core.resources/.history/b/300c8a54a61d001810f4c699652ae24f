@@ -1,0 +1,41 @@
+package Recursion_Lab;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+	public class MyLinkedList extends  LinkedList<String>   {
+		public MyLinkedList() {
+			super();	}
+		
+
+		public String findLargest() {
+		String Largest;
+		Largest= listIterator().next();
+		if(listIterator().hasNext()) {
+			Largest = findLargest(Largest);
+		}
+		return Largest;
+		
+		
+		
+		}
+
+
+		String findLargest(String larg) {
+			String large;
+		System.out.println(larg);
+			if(!listIterator().hasNext()) {
+				large = larg;
+			}else {
+				listIterator().
+				String temp = listIterator().next();
+				if(larg.compareTo(temp)>0) {
+					large = findLargest(larg);
+				}else {
+					large = findLargest(temp);	
+				}
+			}
+		
+			return large;
+		
+		}
+}}

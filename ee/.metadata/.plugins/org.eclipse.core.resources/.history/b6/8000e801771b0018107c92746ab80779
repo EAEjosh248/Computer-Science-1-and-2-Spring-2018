@@ -1,0 +1,59 @@
+/**
+*The purpose of this class is to model a television
+*@author Rajashow 
+* 2018/26/2
+*/
+
+public class Television {
+/**
+ * */
+	Boolean power;
+	final String MANUFACTURER;
+	final	int SCREEN_SIZE;
+	int volume,channel;
+	
+	public Television(String manufacturer, int screenSize) {
+this.MANUFACTURER=manufacturer;
+this.SCREEN_SIZE=screenSize;}
+
+	public void power() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getScreenSize() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getManufacturer() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setChannel(int station) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void increaseVolume() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getChannel() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String getVolume() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void decreaseVolume() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
