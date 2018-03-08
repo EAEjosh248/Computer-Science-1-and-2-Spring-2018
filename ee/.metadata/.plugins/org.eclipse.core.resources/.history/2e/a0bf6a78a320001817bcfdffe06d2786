@@ -1,0 +1,20 @@
+
+public class BasicDoubleLinkedList <T> {
+	int size =0;
+	T last;
+	public void addToEnd(T elem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public int getSize() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public T getLast() {
+		// TODO Auto-generated method stub
+		return last;
+	}
+
+}

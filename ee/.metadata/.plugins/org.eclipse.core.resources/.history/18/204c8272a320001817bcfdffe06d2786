@@ -1,0 +1,9 @@
+
+public class BasicDoubleLinkedList <T> {
+
+	public void addToEnd(T elem) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
