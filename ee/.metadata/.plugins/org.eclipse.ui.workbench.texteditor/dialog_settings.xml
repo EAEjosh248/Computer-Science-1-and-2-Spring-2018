@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="out" key="selection"/>
+		<item value="Sys" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="sys"/>
+			<item value="pre"/>
+			<item value="remove"/>
+			<item value="array"/>
+			<item value="arrat"/>
+			<item value="to"/>
+			<item value="toarray"/>
+			<item value="dele"/>
+			<item value="retrieveFirstElement"/>
+			<item value="nextIndex"/>
+			<item value="add"/>
+			<item value="iter"/>
+			<item value="ite"/>
 			<item value="out"/>
 			<item value="System"/>
-			<item value="MAIN"/>
-			<item value="listI"/>
-			<item value="list"/>
-			<item value="next"/>
-			<item value="exit"/>
-			<item value="eco"/>
-			<item value="ecn"/>
-			<item value="ec"/>
-			<item value="hey"/>
-			<item value="system.out"/>
-			<item value="System.out.println"/>
-			<item value="size"/>
-			<item value="System.out.print"/>
 		</list>
 		<list key="replacehistory">
 			<item value="super("/>

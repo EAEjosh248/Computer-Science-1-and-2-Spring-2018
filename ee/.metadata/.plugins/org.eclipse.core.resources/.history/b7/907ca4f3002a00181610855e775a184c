@@ -1,0 +1,59 @@
+
+
+public class SortedDoubleLinkedList <T> extends BasicDoubleLinkedList<T> {
+
+	public SortedDoubleLinkedList(java.util.Comparator<T> comparator2) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public void add(T elem) {
+		 if (o == null) {
+		      return;
+		    }
+
+		    Node newnode = new Node();
+		    if (itsHead == null) {
+		      // The list was empty
+		      itsHead = itsTail = new ListNode(o);
+		    } else {
+		      // Check if it needs to go right at the head
+		      if (itsComparator.compare(o, itsHead.data) <= 0) {
+		        newnode.next = itsHead;
+		        itsHead = newnode;
+		      }
+		      // Check if it needs to go right at the tail
+		      else if (itsComparator.compare(o, itsTail.data) >= 0) {
+		        itsTail.next = newnode;
+		        itsTail = newnode;
+		      } else {
+		        // It needs to be inserted into the middle of the list
+		        ListNode next = itsHead.next;
+		        ListNode prev = itsHead;
+		        while (itsComparator.compare(o, next.data) > 0) {
+		          prev = next;
+		          next = next.next;
+		        }
+		        // Do the actual insertion
+		        prev.next = newnode;
+		        newnode.next = next;
+		      }
+		    }
+		    itsSize++;		
+	}
+	@Override
+	public void addToEnd(T data) {
+		throw new UnsupportedOperationException();
+	}
+@Override
+public void addToFront(T data)  {
+	throw new UnsupportedOperationException();
+}
+
+public SortedDoubleLinkedList<T> remove(T data, java.util.Comparator<T> comparator){
+			
+	
+	return this;
+	
+}
+
+}

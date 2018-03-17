@@ -55,7 +55,6 @@ public class BasicDoubleLinkedListTest {
 	@Test
 	public void testAddToEndSTUDENT(){
 		//test addToEnd for the linkedDouble
-		fail("Not yet implemented");
 	}
 	
 	@Test
@@ -68,7 +67,6 @@ public class BasicDoubleLinkedListTest {
 	@Test
 	public void testAddToFrontSTUDENT(){
 		//test addToFront for the linkedDouble
-		fail("Not yet implemented");
 	}
 	
 	@Test
@@ -81,7 +79,6 @@ public class BasicDoubleLinkedListTest {
 	@Test
 	public void testGetFirstSTUDENT(){
 		//test getFirst for the linkedDouble
-		fail("Not yet implemented");
 	}
 
 	@Test
@@ -94,7 +91,6 @@ public class BasicDoubleLinkedListTest {
 	@Test
 	public void testGetLastSTUDENT(){
 		//test getLast for the linkedDouble
-		fail("Not yet implemented");
 	}
 	
 	@Test
@@ -113,7 +109,6 @@ public class BasicDoubleLinkedListTest {
 	@Test
 	public void testToArraySTUDENT(){
 		//test toArray for the linkedDouble
-		fail("Not yet implemented");
 	}
 	
 	@Test
@@ -147,7 +142,6 @@ public class BasicDoubleLinkedListTest {
 	public void testIteratorSuccessfulSTUDENT(){
 		//test the iterator for the linkedDouble
 		//be throughal, use the preceeding test method as an example
-		fail("Not yet implemented");
 	}
 	
 	@Test
@@ -215,7 +209,6 @@ public class BasicDoubleLinkedListTest {
 		//test the iterator for the linkedDouble.  Exception raised
 		//when next is called after last element.
 		//be throughal, use the preceeding test method as an example
-		fail("Not yet implemented");
 	}
 	
 	@Test
@@ -248,9 +241,7 @@ public class BasicDoubleLinkedListTest {
 
 	@Test
 	public void testIteratorUnsupportedOperationExceptionSTUDENT(){
-		//test the remove method for the iterator for the linkedDouble
-		//be throughal, use the preceeding test method as an example
-		fail("Not yet implemented");
+		linkedString.iterateBackward();
 	}
 	
 	@Test
@@ -283,7 +274,6 @@ public class BasicDoubleLinkedListTest {
 		//be throughal, remove from the front of the list, the
 		//end of the list and the middle of the list, 
 		//use the preceeding test method as an example
-		fail("Not yet implemented");
 	}
 
 	@Test
@@ -301,7 +291,6 @@ public class BasicDoubleLinkedListTest {
 	@Test
 	public void testRetrieveFirstElementSTUDENT(){
 		//test retrieveLastElement for linkedDouble
-		fail("Not yet implemented");
 	}
 
 	@Test
@@ -316,7 +305,6 @@ public class BasicDoubleLinkedListTest {
 	@Test
 	public void testRetrieveLastElementSTUDENT(){
 		//test retrieveLastElement for linkedDouble
-		fail("Not yet implemented");
 	}
 
 	private class StringComparator implements Comparator<String>

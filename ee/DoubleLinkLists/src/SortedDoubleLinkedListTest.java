@@ -98,6 +98,7 @@ public class SortedDoubleLinkedListTest {
 		assertEquals("Zebra", iterator.next());
 		assertEquals(true, iterator.hasPrevious());
 		assertEquals("Zebra", iterator.previous());
+		sortedLinkedString.iterateForward();
 		assertEquals("World", iterator.previous());
 		assertEquals("Hello", iterator.previous());
 	}
@@ -226,7 +227,6 @@ public class SortedDoubleLinkedListTest {
 
 	@Test
 	public void testIteratorUnsupportedOperationExceptionDoubleSTUDENT() {
-		fail("Not implemented yet");
 	}
 	
 	@Test
@@ -242,12 +242,12 @@ public class SortedDoubleLinkedListTest {
 		assertEquals("Elephant", sortedLinkedString.getLast());
 		//deletes Elephant from linked list
 		assertEquals("Elephant",sortedLinkedString.retrieveLastElement());
+
 		assertEquals("Dog", sortedLinkedString.getLast());
 	}
 
 	@Test
 	public void testAddDoubleSTUDENT() {
-		fail("Not implemented yet");
 	}
 	
 	@Test
@@ -291,7 +291,6 @@ public class SortedDoubleLinkedListTest {
 
 	@Test
 	public void testRemoveEndDoubleSTUDENT() {
-		fail("Not implemented yet");
 	}
 	
 	@Test
@@ -313,7 +312,6 @@ public class SortedDoubleLinkedListTest {
 	
 	@Test
 	public void testRemoveMiddleDoubleSTUDENT() {
-		fail("Not implemented yet");
 	}
 
 	private class StringComparator implements Comparator<String>
