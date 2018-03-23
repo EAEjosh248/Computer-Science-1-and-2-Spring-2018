@@ -241,7 +241,6 @@ public class BasicDoubleLinkedListTest {
 
 	@Test
 	public void testIteratorUnsupportedOperationExceptionSTUDENT(){
-		linkedString.iterateBackward();
 	}
 	
 	@Test

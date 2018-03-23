@@ -98,7 +98,6 @@ public class SortedDoubleLinkedListTest {
 		assertEquals("Zebra", iterator.next());
 		assertEquals(true, iterator.hasPrevious());
 		assertEquals("Zebra", iterator.previous());
-		sortedLinkedString.iterateForward();
 		assertEquals("World", iterator.previous());
 		assertEquals("Hello", iterator.previous());
 	}
@@ -248,6 +247,7 @@ public class SortedDoubleLinkedListTest {
 
 	@Test
 	public void testAddDoubleSTUDENT() {
+		
 	}
 	
 	@Test

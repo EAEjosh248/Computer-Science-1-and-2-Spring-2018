@@ -1,9 +1,0 @@
-
-
-public class SortedDoubleLinkedList <T> extends BasicDoubleLinkedList<T> {
-
-	public SortedDoubleLinkedList(java.util.Comparator<T> comparator) {
-		// TODO Auto-generated constructor stub
-	}
-
-}

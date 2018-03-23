@@ -2,6 +2,19 @@ import java.util.ArrayList;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
+/**
+ * This generic double-linked list relies on a head (reference to first element of the list) and tail (reference to the last element of the list). Both are set to null when the list is empty. Both point to the same element when there is only one element in the list. A node structure has only three fields: data and the prev and next references. The class must only define the following entities: an inner class Node, an inner class that implements ListIterator (for the iterator method), head and tail references and an integer representing the list size. However only the hasNext(), next(), hasPrevious() and previous() methods of ListIterator need to be implemented, all other methods can throw the UnsupportedOperationException: 
+
+	public void remove() throws UnsupportedOperationException{
+
+@throws UnsupportedOperationException();}
+	All the entities are defined as protected so they can be accessed by the subclasses. 
+
+
+
+@Author:Rajashow Parajuli
+ * */
+
 public class BasicDoubleLinkedList<T> implements java.lang.Iterable<T> {
 	protected class Node {
 		protected T item;
@@ -14,68 +27,83 @@ public class BasicDoubleLinkedList<T> implements java.lang.Iterable<T> {
 		}
 	}
 
-	protected int size = 0;
+	protected int size;
 	protected Node header, tail;
-	 public void iterateForward(){
-         
-	        System.out.println("iterating forward..");
-	        Node tmp = header;
-	        while(tmp != null){
-	            System.out.println(tmp.item);
-	            tmp = tmp.next;
-	        }
-	    }
-	     
-	    /**
-	     * this method walks backward through the linked list
-	     */
-	    public void iterateBackward(){
-	         
-	        System.out.println("iterating backword..");
-	        Node tmp = tail;
-	        while(tmp != null){
-	            System.out.println(tmp.item);
-	            tmp = tmp.previous;
-	        }
-	    }
-	public void addToEnd(T elem) {
-		 
-		   Node tmp = new Node(elem, null, tail);
-	        if(tail != null) {tail.next = tmp;}
-	        tail = tmp;
-	        if(header == null) { header = tmp;}
-	        size++;
+
+	public BasicDoubleLinkedList() {
+
+		size = 0;
+		header = tail = null;
 
 	}
+	/**
+	 * Adds an element to the end of the list 
+	 * @param data - the data for the Node within the linked list
+	 * @return reference to the current object
+	 */
+	public BasicDoubleLinkedList<T> addToEnd(T elem) {
 
-	public void addToFront(T elem) {
+		Node tmp = new Node(elem, null, tail);
+		if (tail != null) {
+			tail.next = tmp;
+		}
+		tail = tmp;
+		if (header == null) {
+			header = tmp;
+		}
+		size++;
+		return this;
+	}
+	 /**
+     * Adds an element to the front of the list
+     * @param data - the data for the Node within the linked list
+     * @return reference to the current object
+     */
+	public BasicDoubleLinkedList<T> addToFront(T elem) {
 
-		   Node tmp = new Node(elem, header, null);
-	        if(header != null ) {header.previous = tmp;}
-	        header = tmp;
-	        if(tail == null) { tail = tmp;}
-	        size++;
+		Node tmp = new Node(elem, header, null);
+		if (header != null) {
+			header.previous = tmp;
+		}
+		header = tmp;
+		if (tail == null) {
+			tail = tmp;
+		}
+		size++;
+		return this;
 	}
 
+	  /**
+	   * This method just returns the value of the instance variable you use to keep track of size
+	   * @return the size of the linked list
+	   */
 	public int getSize() {
-		// TODO Auto-generated method stub
 		return size;
 	}
-
+	/**
+	 * Returns but does not remove the last element from the list. If there are no elements the method returns null.
+	 * @return the data element or null
+	 */
 	public T getLast() {
-		// TODO Auto-generated method stub
 		return tail.item;
 	}
-
+	  /**
+     * Returns but does not remove the first element from the list. If there are no elements the method returns null. 
+     * @return the data element or null
+     */
 	public T getFirst() {
-		// TODO Auto-generated method stub
 		return header.item;
 	}
+	
+	 /**
+     * Removes the first instance of the targetData from the list. Notice that you must remove the elements by performing a single traversal over the list.
+     * @param element - the data element to be removed
+     * @param comparator the comparator to determine equality of data elements
+     * @return data element or null
+     */
 
 	public BasicDoubleLinkedList<T> remove(T elem, java.util.Comparator<T> comparator) {
 		Node prev = null, curr = header;
-		ListIterator<T> iterator1 = new iter();
-
 		while (curr != null) {
 			if (comparator.compare(curr.item, elem) == 0) {
 				if (curr == header) {
@@ -97,30 +125,48 @@ public class BasicDoubleLinkedList<T> implements java.lang.Iterable<T> {
 		}
 		return this;
 	}
-
+	  /**
+	   * Removes and returns the first element from the list. If there are no elements the method returns null. 
+	   * @return data element or null
+	   */
 	public T retrieveFirstElement() {
 		if (size == 0) {
 			throw new NoSuchElementException("Linked list is empty");
 		}
-	        Node tmp = header;
-	        header = header.next;
-	        header.previous = null;
-	        size--;
-	        System.out.println("deleted: "+tmp.item);
-	        return tmp.item;
+		Node tmp = header;
+		header = header.next;
+		header.previous = null;
+		size--;
+		return tmp.item;
 	}
-
+	/**
+	 * Removes and returns the last element from the list. If there are no elements the method returns null. 
+	 * @return data element or null
+	 */
 	public T retrieveLastElement() {
-		if (size == 0) {
+		
+		if (header == null) {
 			throw new NoSuchElementException("Linked list is empty");
-		}
-		 Node tmp = tail;
-	        tail = tail.previous;
-	        tail.next = null;
-	        size--;
-	        return tmp.item;
-	}
 
+		}
+		   Node currentNode = header;
+           Node previousNode = null;
+
+           while (currentNode != null) {
+               if (currentNode.equals(tail)) {
+                   tail = previousNode;
+                   break;
+               }
+               previousNode = currentNode;
+               currentNode = currentNode.next;
+           }
+           size--;
+           return currentNode.item;
+}
+	/**
+	 * Returns an arraylist of the items in the list from head of list to tail of list
+	 * @return an arraylist of the items in the list
+	 */
 	public ArrayList<T> toArrayList() {
 		ArrayList<T> temp = new ArrayList<T>();
 		ListIterator<T> iterator1 = new iter();
@@ -130,73 +176,50 @@ public class BasicDoubleLinkedList<T> implements java.lang.Iterable<T> {
 		}
 		return temp;
 	}
-
-	public ArrayList<T> toPArrayList() {
-		ArrayList<T> temp = new ArrayList<T>();
-		ListIterator<T> iterator1 = new iter();
-
-		while (iterator1.hasPrevious()) {
-			temp.add(iterator1.previous());
-		}
-		return temp;
-
-	}
-
 	public class iter implements ListIterator<T> {
-		private Node current;
-		private int index = 0;
-
-		public iter() {
-			current = header;
-		}
-
-		public void reset() {
-			current = header;
-		}
-
-		public boolean hasNext() {
-			return index < size;
-		}
-
-		public T next()
-
-		{
-			if (hasNext()) {
-				index++;
-				Node temp = current;
-				current = current.next;
-
-				return temp.item;
-			} else {
-				throw new NoSuchElementException();
+		 private Node current;
+		    private Node last;
+		    public iter()
+		    {
+		    current = header;
+		    last = null;
+		    }
+		    public T next()
+		    {
+		    if(current != null)
+		    {
+		    T returnData = current.item;
+		    last = current;
+		    current = current.next;
+		    if(current != null) { current.previous = last;}
+		    return returnData;
+		    }
+		    else
+		    throw new NoSuchElementException();
+		    }
+		    public boolean hasNext()
+		    {
+		return current!=null;
+		    }
+		    public T previous()
+		    {
+		    if(last != null)
+		    {
+		    current = last;
+		    last= current.previous;
+		    T returnData = current.item;
+		    return returnData;
+		    }
+		    else
+		    throw new NoSuchElementException();
+		    }
+		    public boolean hasPrevious()
+		    {
+		    return last!=null;
+		    }
+			public void set(T elem) {
+				current.item = elem;
 			}
-		}
-
-		public void set(T elem) {
-			current.item = elem;
-		}
-
-		@Override
-		public boolean hasPrevious() {
-			return index > 0;
-
-		}
-
-		@Override
-		public T previous() {
-			if (!hasPrevious())
-				throw new NoSuchElementException();
-//			if(current != null) {
-			current = current.previous;
-//		}
-//			else {
-				current =tail;
-//			}
-			index--;
-
-			return current.item;
-		}
-
 		@Override
 		public int nextIndex() {
 			throw new UnsupportedOperationException();
@@ -217,11 +240,9 @@ public class BasicDoubleLinkedList<T> implements java.lang.Iterable<T> {
 			throw new UnsupportedOperationException();
 
 		}
-
 	}
 
 	public ListIterator<T> iterator() {
-		// TODO Auto-generated method stub
 		return new iter();
 	}
 
