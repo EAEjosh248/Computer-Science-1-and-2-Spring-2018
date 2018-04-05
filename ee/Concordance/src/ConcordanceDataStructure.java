@@ -95,6 +95,8 @@ public class ConcordanceDataStructure implements ConcordanceDataStructureInterfa
 		});
 
 		return temp;
+	
+	
 
 	}
 

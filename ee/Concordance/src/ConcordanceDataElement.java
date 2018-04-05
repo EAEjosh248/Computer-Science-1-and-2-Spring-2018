@@ -43,8 +43,8 @@ public class ConcordanceDataElement implements Comparable<ConcordanceDataElement
 		Iterator iter = pageNumber.iterator();
 		temp += iter.next();
 		while (iter.hasNext())
-			temp += "," + iter.next();
-		return word + temp;
+			temp += ", " + iter.next();
+		return word + temp +"\n";
 
 	}
 }

@@ -100,7 +100,7 @@ public class ConcordanceDataManagerTest {
 			scan.close();
 			outFile.close();
 			
-		 
+		 System.out.println(words);
 			assertEquals("aid: 3", words.get(0));
 			assertEquals( "all: 2", words.get(1));
 			assertEquals("come: 3", words.get(2));
