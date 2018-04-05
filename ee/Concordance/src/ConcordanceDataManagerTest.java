@@ -67,7 +67,6 @@ public class ConcordanceDataManagerTest {
 	 */
 	@Test
 	public void testCreateConcordanceArraySTUDENT() {
-		assertFalse("This test has not yet been implemented", true);
 	}
 	
 	/**

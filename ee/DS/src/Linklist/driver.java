@@ -1,6 +1,5 @@
 package Linklist;
 
-import Recursion_Lab.LinkedList;
 
 public class driver {
 
