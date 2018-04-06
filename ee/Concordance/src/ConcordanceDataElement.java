@@ -24,6 +24,7 @@ public class ConcordanceDataElement implements Comparable<ConcordanceDataElement
 
 	}
 
+	@SuppressWarnings("unchecked")
 	LinkedList<Integer> getList() {
 		return (LinkedList<Integer>) pageNumber.clone();
 
@@ -38,6 +39,7 @@ public class ConcordanceDataElement implements Comparable<ConcordanceDataElement
 		return word.hashCode();
 	}
 
+	@SuppressWarnings("rawtypes")
 	public String toString() {
 		String temp = ": ";
 		Iterator iter = pageNumber.iterator();

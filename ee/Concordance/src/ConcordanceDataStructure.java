@@ -76,29 +76,73 @@ public class ConcordanceDataStructure implements ConcordanceDataStructureInterfa
 	@Override
 	public ArrayList<String> showAll() {
 
-		ArrayList<String> temp = new ArrayList<String>();
-
-		for (int i = 0; i < TableSize; i++) {
-			if (table[i] != null)
-				for (int j = 0; j < table[i].size(); j++) {
-
-					temp.add(table[i].get(j).toString());
+		ArrayList<String> string = new ArrayList<String>();
+		ArrayList<ConcordanceDataElement> listCombined = new ArrayList<ConcordanceDataElement>();
+		ConcordanceDataElement copy;
+		int index = 0;
+		for(int i = 0; i < TableSize; i++) {
+			if(table[i] != null)
+			for(int j = 0; j < table[i].size(); j++) {
+				copy = table[i].get(j);
+				listCombined.add(copy);
+				index++;
+			}
+			
+			
+		}
+		
+		ConcordanceDataElement smallest;
+		ConcordanceDataElement temp;
+		int smallestIndex;
+		for(int i = 0; i < listCombined.size(); i++) {
+			smallestIndex = i;
+			smallest = listCombined.get(i);
+			for(int j = i; j < listCombined.size(); j++) {
+				if(listCombined.get(j).compareTo(smallest) < 0) {
+					smallest = listCombined.get(j);
+					smallestIndex = j;
 				}
-
+			}
+			temp = listCombined.get(i);
+			listCombined.remove(i);
+			if(smallestIndex != 0)
+			listCombined.add(i, listCombined.get(smallestIndex - 1));
+			else
+				listCombined.add(i, listCombined.get(smallestIndex));
+			listCombined.remove(smallestIndex);
+			listCombined.add(smallestIndex, temp);
+		}
+		
+		for(int i = 0; i < listCombined.size(); i++) {
+			string.add(listCombined.get(i).toString());
 		}
 
-		Collections.sort(temp, new Comparator<String>() {
-			@Override
-			public int compare(String s1, String s2) {
-				return s1.compareToIgnoreCase(s2);
-			}
-		});
-
-		return temp;
-	
-	
-
+		return string;
 	}
+		
+//		ArrayList<String> temp = new ArrayList<String>();
+//
+//		for (int i = 0; i < TableSize; i++) {
+//			if (table[i] != null)
+//				for (int j = 0; j < table[i].size(); j++) {
+//
+//					temp.add(table[i].get(j).toString());
+//				}
+//
+//		}
+//
+//		Collections.sort(temp, new Comparator<String>() {
+//			@Override
+//			public int compare(String s1, String s2) {
+//				return s1.compareToIgnoreCase(s2);
+//			}
+//		});
+
+//		return temp;}
+	
+	
+
+	
 
 	public static int fourKPlus3(int n, int pct) // from Figure 5.16
 	{

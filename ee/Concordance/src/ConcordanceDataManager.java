@@ -22,7 +22,6 @@ public class ConcordanceDataManager implements ConcordanceDataManagerInterface{
 		}
 		
 		data = new ConcordanceDataStructure(size);
-		System.out.println(line);
 		for (int i = 0; i < line.length; i++) {
 			word = line[i].toLowerCase().split(" ");
 
@@ -68,7 +67,6 @@ public class ConcordanceDataManager implements ConcordanceDataManagerInterface{
 		return true;
 		} catch (IOException e) {
 			System.out.println("IO Exception occurred");
-			e.printStackTrace();
 		}
 		return true;
 	}
