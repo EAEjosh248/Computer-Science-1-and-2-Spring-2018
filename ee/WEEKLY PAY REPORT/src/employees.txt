@@ -1,0 +1,4 @@
+John:Smith:Manufacturing:6.75:120:444
+Betty:White:Manager:1200.00:111
+Stan:Slimy:Sales:10000.00:332
+Betty:Boop:Design:12.50:50:244

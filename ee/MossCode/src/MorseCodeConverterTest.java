@@ -27,7 +27,7 @@ public class MorseCodeConverterTest {
 	{
 		//Note the extra space between j and b - that is because there is an empty string that
 		//is the root, and in the LNR traversal, the root would come between the right most
-		//child of the left tree (j) and the left most child of the right tree (b).
+		//		child of the left tree (j) and the left most child of the right tree (b).
 		String correctResult = "h s v i f u e l r a p w j  b d x n c k y t z g q m o";
 		String s = MorseCodeConverter.printTree();
 		s = s.trim(); // take off preceeding or succedding spaces
@@ -70,11 +70,9 @@ public class MorseCodeConverterTest {
 			try
 			{
 				inputFile = chooser.getSelectedFile();
-				// readFile();
 			}
 			catch (Exception e) {
-				// TODO Auto-generated catch block
-				//e.printStackTrace();
+			
 				JOptionPane.showMessageDialog(null, "There is a problem with this file", "Error", JOptionPane.ERROR_MESSAGE);
 			}
 		}
