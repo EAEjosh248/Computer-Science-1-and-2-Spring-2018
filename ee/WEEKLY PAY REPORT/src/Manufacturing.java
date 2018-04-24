@@ -53,7 +53,7 @@ public class Manufacturing extends Employee
 	
 	/**
 	 * Set amount of pieces
-	 * @param pieceAmount 
+	 * @param pieceAmount - the number of pieces
 	 */
 	public void setPieceAmount(double pieceAmount) {
 		this.pieceAmount = pieceAmount;
@@ -69,16 +69,11 @@ public class Manufacturing extends Employee
 	
 	/**
 	 * Set price per piece
-	 * @param pricePerPiece 
+	 * @param pricePerPiece - the price for each piece
 	 */
 	public void setPricePerPiece(double pricePerPiece) {
 		this.pricePerPiece = pricePerPiece;
 	}
 	
-	/**
-	 * Checks to make sure user input valid data
-	 */
-	public boolean inputValidation()
-	{
-		return !(pieceAmount < 0 || pricePerPiece < 0);}	
+	
 }

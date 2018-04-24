@@ -86,7 +86,7 @@ public abstract class Employee
 
 	/**
 	 * Set firstName
-	 * @param FirstName
+	 * @param firstName - first name of the employee
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
@@ -118,7 +118,7 @@ public abstract class Employee
 
 	/**
 	 * set employee number
-	 * @param employeeNumber
+	 * @param employeeNumber -employee's number
 	 */
 	public void setEmployeeNumber(int employeeNumber) {
 		this.employeeNumber = employeeNumber;

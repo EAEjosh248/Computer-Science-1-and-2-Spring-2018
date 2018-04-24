@@ -20,11 +20,10 @@ public Manager()
 	
 	/**
 	 * Parameterized constructor
-	 * @param firstName first name
-	 * @param lastName last name 
-	 * @param empNum employee number
-	 * @param payRate pay rate
-	 * @param hours hours worked
+	 * @param firstName - first name
+	 * @param lastName - last name 
+	 * @param empNum - employee number
+	 * @param salary - salary per week
 	 */
 public Manager(String firstName, String lastName, int empNum, double salary)
 {
@@ -53,18 +52,11 @@ public double getSalary() {
 
 /**
  * Set salary of this manager
- * @param salary
+ * @param salary - salary per week
  */
 public void setSalary(double salary) {
 	this.salary = salary;
 }
 
-/**
- * Validates input from user
- * @return false if salary < 0.
- */
-public boolean inputValidation()
-{
-	return !(salary < 0);
-}
+
 }

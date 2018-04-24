@@ -39,15 +39,15 @@ public class Company implements CompanyInterface {
 		fmt = NumberFormat.getCurrencyInstance();
 	}
 	/**
-	 * returns  name of company
+	 * returns name of company
 	 * @return  companyName
 	 */
 	public String getCompanyName() {
 		return companyName;
 	}
 	/**
-	 * set the name of company
-	 * @param  companyName
+	 * set the name of the company
+	 * @param  companyName -  name of the company
 	 */
 	public void setCompanyName(String companyName) {
 		this.companyName = companyName;
@@ -55,7 +55,7 @@ public class Company implements CompanyInterface {
 
 	/**
 	 * Add an employee to the ArrayList.
-	 * @param type Type of employee: Manager, Design, Sales, Manufacturing
+	 * @param pos - Type of employee: Manager, Design, Sales, Manufacturing
 	 * @param firstName First Name
 	 * @param lastName Last Name
 	 * @param firstParam Manager-salary, Design-hourly rate, Sales-weekly sales, Manufacturing-rate per piece

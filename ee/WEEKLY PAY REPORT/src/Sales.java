@@ -55,14 +55,6 @@ public class Sales extends Employee{
 		return weeklySales;
 	}
 	
-	/**
-	 * Checks user input data
-	 */
-	public boolean inputValidation()
-	{
-		return !(weeklySales < 0);
-			
-	}
-	
+
 	
 }

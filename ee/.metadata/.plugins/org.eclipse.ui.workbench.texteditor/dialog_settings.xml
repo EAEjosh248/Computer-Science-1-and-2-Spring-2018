@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="sortedActors" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="(Town)"/>
+			<item value="V"/>
+			<item value="E"/>
+			<item value="&lt;E&gt;"/>
 			<item value="sortedActors"/>
 			<item value="sys"/>
 			<item value="set"/>
@@ -19,12 +23,12 @@
 			<item value="actorNames"/>
 			<item value="MovieEdge"/>
 			<item value="movieName"/>
-			<item value="graph"/>
-			<item value="actor2"/>
-			<item value="actor1"/>
-			<item value="Actor"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="Town"/>
+			<item value="Road"/>
+			<item value="&lt;Road&gt;"/>
 			<item value="townD"/>
 			<item value="townS"/>
 			<item value="roads"/>
@@ -32,14 +36,10 @@
 			<item value="(townName"/>
 			<item value="("/>
 			<item value="towns"/>
-			<item value="Road"/>
 			<item value="roadName"/>
 			<item value="map"/>
 			<item value="desntinationTown"/>
 			<item value="sourceTown"/>
-			<item value="Town"/>
-			<item value="Map"/>
-			<item value=""/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

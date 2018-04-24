@@ -73,17 +73,11 @@ public class Design extends Employee{
 	
 	/**
 	 * Set hours worked
-	 * @param hours 
+	 * @param hours - hours worked
 	 */
 	public void setHours(double hours) {
 		this.hours = hours;
 	}
 	
-	/**
-	 * Validates input by user
-	 * @return false if either payRate or hours < 0.
-	 */
-	public boolean inputValidation()
-	{return !(payRate < 0 || hours < 0);}
 
 }

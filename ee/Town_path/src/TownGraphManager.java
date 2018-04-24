@@ -4,7 +4,7 @@ import java.util.Collections;
 @SuppressWarnings("unchecked")
 public class TownGraphManager implements TownGraphManagerInterface {
 	@SuppressWarnings("rawtypes")
-	private Graph map = new Graph<Town, Road>();
+	private Graph map = new Graph();
 	private ArrayList<String> roads = new ArrayList<String>();
 	private ArrayList<String> towns = new ArrayList<String>();
 
@@ -125,12 +125,11 @@ public class TownGraphManager implements TownGraphManagerInterface {
 	public ArrayList<String> getPath(String sourceTown, String desntinationTown) {
 		Town townS = new Town(sourceTown);
 		Town townD = new Town(desntinationTown);
-
-		if (map.containsEdge(townS, townD)) {
+		if(map.containsVertex(townD) && map.containsVertex(townS))
 			return map.shortestPath(townS, townD);
-		}
-
 		return null;
+
+	
 
 	}
 

@@ -53,6 +53,13 @@
 		<item value="710" key="DIALOG_X_ORIGIN"/>
 		<item value="166" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="DialogBounds_OverrideMethodDialog">
+		<item value="526" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="467" key="DIALOG_HEIGHT"/>
+		<item value="705" key="DIALOG_X_ORIGIN"/>
+		<item value="237" key="DIALOG_Y_ORIGIN"/>
+	</section>
 	<section name="org.eclipse.jdt.internal.ui.dialogs.OpenTypeSelectionDialog2">
 		<item value="true" key="ShowStatusLine"/>
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
@@ -86,7 +93,7 @@
 	<section name="javadoc">
 		<item value="public" key="access"/>
 		<item value="false" key="noindex"/>
-		<item value="C:\Users\Rajashow\Desktop\code\java\204-C2\ee\Prop_manager\javadoc.xml" key="antpath"/>
+		<item value="C:\Users\Rajashow\Desktop\code\java\204-C2\ee\WEEKLY PAY REPORT\javadoc.xml" key="antpath"/>
 		<item value="false" key="nodeprecatedlist"/>
 		<item value="true" key="use"/>
 		<item value="true" key="author"/>
@@ -100,12 +107,12 @@
 		<item value="true" key="splitindex"/>
 		<item value="true" key="fromStandard"/>
 		<item value="false" key="notree"/>
-		<item value="C:\Users\Rajashow\Desktop\code\java\204-C2\ee\Sales Report\doc" key="destdir"/>
+		<item value="C:\Users\Rajashow\Desktop\code\java\204-C2\ee\WEEKLY PAY REPORT\doc" key="destdir"/>
 		<item value="false" key="openinbrowser"/>
 		<section name="projects">
-			<section name="Sales Report">
-				<item value="C:\Users\Rajashow\Desktop\code\java\204-C2\ee\Prop_manager\javadoc.xml" key="antpath"/>
-				<item value="C:\Users\Rajashow\Desktop\code\java\204-C2\ee\Sales Report\doc" key="destdir"/>
+			<section name="WEEKLY PAY REPORT">
+				<item value="C:\Users\Rajashow\Desktop\code\java\204-C2\ee\WEEKLY PAY REPORT\javadoc.xml" key="antpath"/>
+				<item value="C:\Users\Rajashow\Desktop\code\java\204-C2\ee\WEEKLY PAY REPORT\doc" key="destdir"/>
 				<item value="" key="href"/>
 			</section>
 		</section>
@@ -123,6 +130,9 @@
 		<item value="false" key="SkipNull"/>
 		<item value="false" key="FinalModifier"/>
 		<item value="10" key="LimitValue"/>
+	</section>
+	<section name="OverrideMethodDialog">
+		<item value="true" key="showtypes"/>
 	</section>
 	<section name="RenameInformationPopup">
 		<item value="2" key="snap_position"/>

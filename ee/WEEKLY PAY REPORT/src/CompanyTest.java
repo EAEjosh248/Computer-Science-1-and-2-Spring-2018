@@ -23,6 +23,8 @@ public class CompanyTest {
 		StudentCompany.addEmployee("Betty","White","Manager",1200.00, 0, 111); //Manager
 		StudentCompany.addEmployee("Stan","Slimey","Sales",10000.00, 0, 332); //Sales
 		StudentCompany.addEmployee("Betty","Boop","Design",12.50, 50, 244); //Hourly worker
+		StudentCompany.addEmployee("bob","manti","Design",12.50, 50, 244); //Hourly worker
+
 		// Student test methods.
 	}
 
@@ -58,7 +60,15 @@ public class CompanyTest {
 
 	@Test
 	public void testAddEmployeeSTUDENT() {
-		fail("Not yet implemted");
+		String result = StudentCompany.generateWeeklyReport();
+		Scanner report = new Scanner(result);
+		report.nextLine(); //WEEKLY PAY REPORT FOR WIDGET COMPANY
+		report.nextLine();  //empty line
+		report.nextLine();  //EMPLOYEE        WEEKLY PAY
+		report.nextLine(); //employee 444
+		report.nextLine(); //employee 111
+		report.nextLine(); //employee 332
+		assertEquals("244",report.next()); //employee 244
 	}
 	
 	@Test
@@ -72,11 +82,11 @@ public class CompanyTest {
 	@Test
 	public void testCalculateTotalWeeklyPaySTUDENT()
 	{
-		assertEquals(3517.50, company.calculateTotalWeeklyPay(), .001);
-		company.addEmployee("Charles","Emory","Design", 7.50, 35, 343); //Design employee
-		assertEquals(3780.00, company.calculateTotalWeeklyPay(), .001);
-		company.removeEmployee("Charles","Emory");
-		assertEquals(3517.50, company.calculateTotalWeeklyPay(), .001);
+		assertEquals(4205, StudentCompany.calculateTotalWeeklyPay(), .001);
+		StudentCompany.addEmployee("Charles","Emory","Design", 7.50, 35, 343); //Design employee
+		assertEquals(4205.00, StudentCompany.calculateTotalWeeklyPay(), .001);
+		StudentCompany.removeEmployee("Charles","Emory");
+		assertEquals(4205.0, StudentCompany.calculateTotalWeeklyPay(), .001);
 	}
 	
 	@Test
