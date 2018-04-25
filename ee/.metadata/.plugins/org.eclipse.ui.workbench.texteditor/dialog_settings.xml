@@ -2,12 +2,18 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
+<<<<<<< HEAD
 		<item value="" key="selection"/>
 		<item value="true" key="casesensitive"/>
+=======
+		<item value="setOn" key="selection"/>
+		<item value="false" key="casesensitive"/>
+>>>>>>> parent of 0a3f1e6... 1
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+<<<<<<< HEAD
 			<item value="(Town)"/>
 			<item value="V"/>
 			<item value="E"/>
@@ -23,6 +29,23 @@
 			<item value="actorNames"/>
 			<item value="MovieEdge"/>
 			<item value="movieName"/>
+=======
+			<item value="seton"/>
+			<item value="set"/>
+			<item value="br"/>
+			<item value="rent"/>
+			<item value="createNewMgm"/>
+			<item value="setBlank"/>
+			<item value="propertyFieldsEmpty"/>
+			<item value="mgmFieldsEmpty"/>
+			<item value="update"/>
+			<item value="search"/>
+			<item value="s"/>
+			<item value="binary"/>
+			<item value="BinaryNode"/>
+			<item value="main"/>
+			<item value="ame|GPA"/>
+>>>>>>> parent of 0a3f1e6... 1
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

@@ -30,7 +30,7 @@ public class CompanyTest {
 
 	@After
 	public void tearDown() throws Exception {
-		company = null;
+		company =  StudentCompany =null;
 	}
 
 	@Test
