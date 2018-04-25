@@ -2,74 +2,23 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-<<<<<<< HEAD
-		<item value="" key="selection"/>
-		<item value="true" key="casesensitive"/>
-=======
-		<item value="setOn" key="selection"/>
+		<item value="reset" key="selection"/>
 		<item value="false" key="casesensitive"/>
->>>>>>> parent of 0a3f1e6... 1
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-<<<<<<< HEAD
-			<item value="(Town)"/>
-			<item value="V"/>
-			<item value="E"/>
-			<item value="&lt;E&gt;"/>
-			<item value="sortedActors"/>
-			<item value="sys"/>
-			<item value="set"/>
-			<item value="act2"/>
-			<item value="act1"/>
-			<item value="movieTitles"/>
-			<item value="sortedMovieTitles"/>
-			<item value="(v"/>
-			<item value="actorNames"/>
-			<item value="MovieEdge"/>
-			<item value="movieName"/>
-=======
-			<item value="seton"/>
-			<item value="set"/>
-			<item value="br"/>
-			<item value="rent"/>
-			<item value="createNewMgm"/>
-			<item value="setBlank"/>
-			<item value="propertyFieldsEmpty"/>
-			<item value="mgmFieldsEmpty"/>
-			<item value="update"/>
-			<item value="search"/>
-			<item value="s"/>
-			<item value="binary"/>
-			<item value="BinaryNode"/>
-			<item value="main"/>
-			<item value="ame|GPA"/>
->>>>>>> parent of 0a3f1e6... 1
+			<item value="reset"/>
+			<item value="res"/>
 		</list>
 		<list key="replacehistory">
-			<item value=""/>
-			<item value="Town"/>
-			<item value="Road"/>
-			<item value="&lt;Road&gt;"/>
-			<item value="townD"/>
-			<item value="townS"/>
-			<item value="roads"/>
-			<item value="sortedRoads"/>
-			<item value="(townName"/>
-			<item value="("/>
-			<item value="towns"/>
-			<item value="roadName"/>
-			<item value="map"/>
-			<item value="desntinationTown"/>
-			<item value="sourceTown"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="284" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="1376" key="DIALOG_X_ORIGIN"/>
-		<item value="229" key="DIALOG_Y_ORIGIN"/>
+		<item value="826" key="DIALOG_X_ORIGIN"/>
+		<item value="288" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

@@ -33,6 +33,7 @@ public class CarPanel extends JComponent
 	               for(int i=0;i<10;i++)
 	               {
 	            	   direction = carQueue.deleteQueue();
+	            	   
 	            	   x = x+10;
 	            	   repaint();
 	            	   Thread.sleep(delay*1000);

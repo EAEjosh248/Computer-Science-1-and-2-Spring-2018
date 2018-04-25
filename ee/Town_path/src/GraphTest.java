@@ -104,8 +104,14 @@ public class GraphTest {
 	
 	@Test
 	public void testEdgesOfSTUDENT() {
-		fail("Test not implemented yet");
-	}
+		Set<Road> roads = graph.edgesOf(town[1]);
+		ArrayList<String> roadArrayList = new ArrayList<String>();
+		for(Road road : roads)
+			roadArrayList.add(road.getName());
+		Collections.sort(roadArrayList);
+		assertEquals("Road_1", roadArrayList.get(0));
+		assertEquals("Road_2", roadArrayList.get(1));
+		assertEquals("Road_3", roadArrayList.get(2));	}
 
 	@Test
 	public void testRemoveEdge() {
@@ -116,8 +122,9 @@ public class GraphTest {
 
 	@Test
 	public void testRemoveEdgeSTUDENT() {
-		fail("Test not implemented yet");
-	}
+		assertEquals(true, graph.containsEdge(town[2], town[11]));
+		graph.removeEdge(town[2], town[11], 6, "Road_12");
+		assertEquals(false, graph.containsEdge(town[2], town[11]));	}
 	
 	@Test
 	public void testRemoveVertex() {
@@ -224,7 +231,15 @@ public class GraphTest {
 	  }
 	  @Test
 	  public void testTown_5ToTown_2STUDENT() {
-		  fail("Test not implemented yet");
-	  }	
+		  ArrayList<String> path = graph.shortestPath(town[1],town[6]);
+		  assertNotNull(path);
+		  assertTrue(path.size() > 0);
+		  assertEquals("Town_1 via Road_2 to Town_3 4 mi",path.get(0).trim());
+		  assertEquals("Town_3 via Road_5 to Town_8 2 mi",path.get(1).trim());
+		  assertEquals("Town_8 via Road_9 to Town_10 2 mi",path.get(2).trim());
+		  assertEquals("Town_10 via Road_8 to Town_9 4 mi",path.get(3).trim());
+		  assertEquals("Town_9 via Road_7 to Town_6 3 mi",path.get(4).trim());
+}
+	  
 
 }

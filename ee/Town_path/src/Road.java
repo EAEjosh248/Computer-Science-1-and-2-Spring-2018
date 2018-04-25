@@ -74,9 +74,7 @@ public class Road implements Comparable<Road> {
 
 	@Override
 	public String toString() {
-		Iterator<Town> iter = Towns.iterator();
-		return name + ";" + weight + ";" + iter.next().getName() + iter.next().getName();
-
+		return  name;
 	}
 
 }

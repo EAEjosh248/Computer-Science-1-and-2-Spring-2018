@@ -34,6 +34,12 @@ public class Town implements Comparable<Town> {
 		this.backpath = backpath;
 	}
 
+	public void addTowns(Town T) {
+		adjecentTowns.add(T);
+	}
+	public void removeTowns(Town T) {
+		adjecentTowns.remove(T);
+	}
 	public Set<Town> getAdjecentTowns() {
 		return adjecentTowns;
 	}
@@ -45,6 +51,12 @@ public class Town implements Comparable<Town> {
 		weight = Integer.MAX_VALUE;
 		backpath = null;
 	}
+	
+	@Override
+	public String toString() {
+		return name;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
