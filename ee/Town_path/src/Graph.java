@@ -162,7 +162,6 @@ public class Graph implements GraphInterface<Town, Road> {
 			if(t.getName().equals(sourceVertex.getName())) {
 				townS =t;
 				townS.setAdjecentTowns(t.getAdjecentTowns());
-				System.out.println(t.getAdjecentTowns());
 			}
 			if(t.getName().equals(destinationVertex.getName())) {
 				townD =t;
@@ -191,6 +190,7 @@ public class Graph implements GraphInterface<Town, Road> {
 
 	private void getShortestPath(Town sourceVertex, Town destinationVertex) {
 		// Town_1 via Road_1 to Town_2 2 mi"
+		try {
 		Road tempRoad = getEdge(destinationVertex.getBackpath(), destinationVertex);
 		StringBuilder str = new StringBuilder();
 		str.append(destinationVertex.getBackpath().getName());
@@ -206,6 +206,10 @@ public class Graph implements GraphInterface<Town, Road> {
 		if (!(destinationVertex.getBackpath().equals(sourceVertex))) {
 			getShortestPath(sourceVertex, destinationVertex.getBackpath());
 
+		}}catch(NullPointerException e) {
+
+		path.clear();
+		path.add("No such path found");
 		}
 
 	}
@@ -223,7 +227,6 @@ public class Graph implements GraphInterface<Town, Road> {
 			for (Town visitedTown : visitedTowns) {
 
 				Set<Town> adjTowns = visitedTown.getAdjecentTowns();
-				System.out.println(adjTowns);
 
 				Set<Town> adjTownsUnVisited = new HashSet<>();
 				for (Town town : adjTowns) {

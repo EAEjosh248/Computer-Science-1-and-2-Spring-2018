@@ -20,19 +20,27 @@ import javax.swing.JOptionPane;
 
 @SuppressWarnings("restriction")
 public class GuiDriver extends Application {
-	Label townName, roadName, selectTforR, distance, findConnect, to;
+	Label townName, roadName, selectTforR, distance, findConnect, to,townTitle,roadTitle,pathTitle;
 	ComboBox<String> sourceTownCBRD, destinationTownCBRD, sourceTownCBCN, destinationTownCBCN;
 	Button addTown, addRoad, findConnection, readFile, exit;
 	TextField townNameTxtF, roadNameTxtF, distanceTxtF;
 	TextArea messageTextArea;
 	TownGraphManager mgr = new TownGraphManager();
 
-	public HBox addTownPannel() {
+	public VBox addTownPannel() {
 		townName = new Label("Town's Name:");
+		townTitle = new Label("Add Town");
 		townNameTxtF = new TextField();
 		addTown = new Button("Add Town");
-		HBox temp = new HBox(3);
-		temp.getChildren().addAll(townName, townNameTxtF, addTown);
+		HBox temp1 = new HBox(3);
+		temp1.getChildren().addAll(townName, townNameTxtF, addTown);
+		temp1.setSpacing(10);
+		temp1.setAlignment(Pos.CENTER);
+		VBox temp = new VBox(2);
+		townTitle.setStyle("-fx-font-weight: bold;\n"
+				+ "-fx-font: 24 arial;");
+		temp.getChildren().addAll(townTitle,temp1);
+		temp.setMinHeight(150);
 		temp.setSpacing(10);
 		temp.setAlignment(Pos.CENTER);
 		return temp;
@@ -42,11 +50,12 @@ public class GuiDriver extends Application {
 	public VBox addRoadPannel() {
 		roadName = new Label("Road's Name:");
 		distance = new Label("Distance:");
+		roadTitle = new Label("Add Road");
 		selectTforR = new Label("Select towns for road");
 		roadNameTxtF = new TextField();
 		distanceTxtF = new TextField();
 		addRoad = new Button("Add Road");
-		VBox temp = new VBox(3);
+		VBox temp = new VBox(4);
 		HBox temp1 = new HBox();
 		temp1.getChildren().addAll(roadName, roadNameTxtF);
 		temp1.setAlignment(Pos.CENTER);
@@ -55,9 +64,18 @@ public class GuiDriver extends Application {
 		temp2.getChildren().addAll(sourceTownCBRD, destinationTownCBRD, distance, distanceTxtF, addRoad);
 		temp2.setSpacing(20);
 		temp2.setAlignment(Pos.CENTER);
-		temp.getChildren().addAll(temp1, selectTforR, temp2);
+		roadTitle.setStyle("-fx-font-weight: bold;\n"
+				+ "-fx-font: 24 arial;");
+		temp.getChildren().addAll(roadTitle,temp1, selectTforR, temp2);
 		temp.setSpacing(10);
 		temp.setAlignment(Pos.CENTER);
+		temp.setStyle("-fx-border-color: black;\n" +
+                "-fx-border-insets: 5;\n" +
+                "-fx-border-width: 3 0 3 0;\n" +
+                "-fx-border-style: solid;\n");
+		temp.setMinHeight(250);
+		temp.setMinWidth(500);
+
 		return temp;
 
 	}
@@ -65,6 +83,7 @@ public class GuiDriver extends Application {
 	public VBox findConnectionPannel() {
 		findConnect = new Label("Find Connection From");
 		to = new Label("to");
+		pathTitle = new Label("Find Path");
 		findConnection = new Button("Find Connection");
 		messageTextArea = new TextArea();
 		VBox temp = new VBox(2);
@@ -72,7 +91,9 @@ public class GuiDriver extends Application {
 		temp1.getChildren().addAll(findConnect, sourceTownCBCN, to, destinationTownCBCN, findConnection);
 		temp1.setSpacing(20);
 		temp1.setAlignment(Pos.CENTER);
-		temp.getChildren().addAll(temp1, messageTextArea);
+		pathTitle.setStyle("-fx-font-weight: bold;\n"
+				+ "-fx-font: 24 arial;");
+		temp.getChildren().addAll(pathTitle,temp1, messageTextArea);
 		temp.setSpacing(10);
 		temp.setAlignment(Pos.CENTER);
 		return temp;
@@ -107,7 +128,7 @@ public class GuiDriver extends Application {
 		destinationTownCBCN.setPrefWidth(250);
 		destinationTownCBCN.setPrefHeight(20);
 
-		HBox TownPannel = addTownPannel();
+		VBox TownPannel = addTownPannel();
 		VBox RoadPannel = addRoadPannel();
 		VBox ConnectionPannel = findConnectionPannel();
 		HBox ButtonPannel = MasterButtonPannel();
@@ -138,8 +159,11 @@ public class GuiDriver extends Application {
 					throw new Exception();
 				if (destinationTownCBRD.getValue().equals(null))
 					throw new Exception();
+				int tempWeight = Integer.parseInt(distanceTxtF.getText());
+					if(tempWeight<0)
+						throw new Exception();
 				mgr.addRoad(sourceTownCBRD.getValue(), destinationTownCBRD.getValue(),
-						Integer.parseInt(distanceTxtF.getText()), roadNameTxtF.getText());
+						tempWeight, roadNameTxtF.getText());
 				clearFields();
 			} catch (Exception exp) {
 				JOptionPane.showMessageDialog(null, "Invaild Input");
@@ -190,7 +214,6 @@ public class GuiDriver extends Application {
 						roadInfo = content[0].split(",");
 						int distance = Integer.parseInt(roadInfo[1]);
 
-						System.out.println(content);
 						String road = roadInfo[0];
 						String townS = content[1];
 						String townD = content[2];
@@ -202,6 +225,7 @@ public class GuiDriver extends Application {
 
 					updateCombBox();
 					clearFields();
+					JOptionPane.showMessageDialog(null, "Done");
 				}
 
 				catch (FileNotFoundException err) {
@@ -213,6 +237,7 @@ public class GuiDriver extends Application {
 		Scene scene = new Scene(displayPane, 900, 800);
 		stage.setTitle("Town Man");
 		stage.setScene(scene);
+		stage.setResizable(false);
 		stage.show();
 
 	}

@@ -2,13 +2,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * {@inheritDoc}
+ */
 public class TownGraphManager implements TownGraphManagerInterface {
 	private Graph map = new Graph();
 	private ArrayList<String> roads = new ArrayList<String>();
 	private ArrayList<String> towns = new ArrayList<String>();
 
-	
 	public Town getTownFromMap(String name) {
 		Set <Town> towns = map.vertexSet();
 		for(Town t : towns) {
@@ -17,6 +18,7 @@ public class TownGraphManager implements TownGraphManagerInterface {
 		}
 		return null;
 	}
+	
 	public int getRoadFromMapWeight(String name,Town a, Town b) {
 		Set <Road> roads = map.edgeSet();
 		for(Road t : roads) {
@@ -29,6 +31,9 @@ public class TownGraphManager implements TownGraphManagerInterface {
 		}
 		return Integer.MAX_VALUE;
 	}
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean addRoad(String sourceTown, String desntinationTown, int weight, String roadName) {
 		Town townS =getTownFromMap(sourceTown);
@@ -46,7 +51,9 @@ public class TownGraphManager implements TownGraphManagerInterface {
 		}
 		return false;
 	}
-
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public String getRoad(String sourceTown, String desntinationTown) {
 
@@ -60,7 +67,9 @@ public class TownGraphManager implements TownGraphManagerInterface {
 		}
 		return null;
 	}
-
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean addTown(String townName) {
 		Town newTown = new Town(townName);
@@ -74,7 +83,9 @@ public class TownGraphManager implements TownGraphManagerInterface {
 		}
 		return false;
 	}
-
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean containsTown(String townName) {
 		Town town =getTownFromMap(townName);
@@ -82,7 +93,9 @@ public class TownGraphManager implements TownGraphManagerInterface {
 		return (map.containsVertex(town));
 
 	}
-
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean containsRoadConnection(String sourceTown, String desntinationTown) {
 		Town townS = new Town(sourceTown);
@@ -90,7 +103,9 @@ public class TownGraphManager implements TownGraphManagerInterface {
 
 		return (map.containsEdge(townS, townD));
 	}
-
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public ArrayList<String> allRoads() {
 
@@ -102,7 +117,9 @@ public class TownGraphManager implements TownGraphManagerInterface {
 
 		return sortedRoads;
 	}
-
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean deleteRoadConnection(String sourceTown, String desntinationTown, String roadName) {
 		Town townS =getTownFromMap(sourceTown);
@@ -117,12 +134,14 @@ public class TownGraphManager implements TownGraphManagerInterface {
 		return false;
 
 	}
-
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean deleteTown(String townName) {
 		Town town =getTownFromMap(townName);
 
-		if (map.containsVertex(town)) {
+		if (map.containsVertex(town	)) {
 			map.removeVertex(town);
 			towns.remove(townName);
 			return true;
@@ -130,7 +149,9 @@ public class TownGraphManager implements TownGraphManagerInterface {
 		return false;
 
 	}
-
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public ArrayList<String> allTowns() {
 		ArrayList<String> sortedTownNames = new ArrayList<String>();
@@ -140,7 +161,9 @@ public class TownGraphManager implements TownGraphManagerInterface {
 
 		return sortedTownNames;
 	}
-
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public ArrayList<String> getPath(String sourceTown, String desntinationTown) {
 		Town townS = getTownFromMap(sourceTown);
