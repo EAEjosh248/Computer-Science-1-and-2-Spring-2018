@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="org.junit.platform.commons.util.ToStringBuilder"/>
     <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="Property"/>
     <fullyQualifiedTypeName name="BTS.TreeNode.Student"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="ChatServerExecInterface"/>
+    <fullyQualifiedTypeName name="ChatClientInterface"/>
+    <fullyQualifiedTypeName name="java.lang.annotation.Inherited"/>
 </qualifiedTypeNameHistroy>
