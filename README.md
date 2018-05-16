@@ -19,3 +19,5 @@
 * Chat Room 
    * A centrailize chat room that can facalted mulipal users. 
    * It uses socket programming and multithreading.
+
+* More/other projects 
